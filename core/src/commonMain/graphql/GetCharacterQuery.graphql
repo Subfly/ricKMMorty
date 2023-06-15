@@ -1,0 +1,29 @@
+query GetCharacter($id: ID! = 1) {
+    characterDTO: character(id: $id) {
+        id
+        name
+        status
+        species
+        type
+        gender
+        originLocationDTO: origin {
+            id
+            name
+            type
+            dimension
+        }
+        lastLocationDTO: location {
+            id
+            name
+            type
+            dimension
+        }
+        image
+        episodeListDTO: episode {
+            id
+            name
+            episode
+            air_date
+        }
+    }
+}

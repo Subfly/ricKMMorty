@@ -1,0 +1,15 @@
+query GetLocation($id: ID! = 1) {
+    locationDTO: location(id: $id) {
+        id
+        name
+        type
+        dimension
+        characterDTO: residents {
+            id
+            name
+            status
+            species
+            image
+        }
+    }
+}

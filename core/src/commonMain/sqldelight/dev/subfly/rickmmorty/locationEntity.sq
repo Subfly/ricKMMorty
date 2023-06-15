@@ -1,0 +1,25 @@
+CREATE TABLE locationEntity (
+    id INTEGER NOT NULL,
+    name TEXT,
+    type TEXT,
+    dimension TEXT
+);
+
+getAllLocations:
+SELECT * FROM locationEntity;
+
+getLocation:
+SELECT * FROM locationEntity
+WHERE id = ?;
+
+addLocation:
+INSERT
+INTO locationEntity(id, name, type, dimension)
+VALUES (?,?,?,?);
+
+removeLocation:
+DELETE FROM locationEntity
+WHERE id = ?;
+
+nukeDB:
+DELETE FROM locationEntity;

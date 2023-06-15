@@ -1,0 +1,25 @@
+CREATE TABLE episodeEntity (
+    id INTEGER NOT NULL,
+    name TEXT,
+    airDate TEXT,
+    episode TEXT
+);
+
+getAllEpisodes:
+SELECT * FROM episodeEntity;
+
+getEpisode:
+SELECT * FROM episodeEntity
+WHERE id = ?;
+
+addEpisode:
+INSERT
+INTO episodeEntity(id, name, airDate,episode)
+VALUES (?,?,?,?);
+
+removeEpisode:
+DELETE FROM episodeEntity
+WHERE id = ?;
+
+nukeDB:
+DELETE FROM episodeEntity;

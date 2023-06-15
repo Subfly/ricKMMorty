@@ -1,0 +1,35 @@
+CREATE TABLE characterEntity(
+    id INTEGER NOT NULL PRIMARY KEY,
+    name TEXT,
+    status TEXT,
+    species TEXT,
+    type TEXT,
+    gender TEXT,
+    imageUrl TEXT,
+    originId INTEGER NOT NULL,
+    originName TEXT,
+    originType TEXT,
+    originDimension TEXT,
+    lastLocationId INTEGER NOT NULL,
+    lastLocationName TEXT,
+    lastLocationType TEXT,
+    lastLocationDimension TEXT
+);
+
+getAllCharacters:
+SELECT * FROM characterEntity;
+
+getCharacter:
+SELECT * FROM characterEntity WHERE id = ?;
+
+addCharacter:
+INSERT
+INTO characterEntity(id, name, status, species, type, gender, imageUrl, originId, originName, originType, originDimension, lastLocationId, lastLocationName, lastLocationType, lastLocationDimension)
+VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?, ?, ?);
+
+removeCharacter:
+DELETE FROM characterEntity
+WHERE id = ?;
+
+nukeDB:
+DELETE FROM characterEntity;

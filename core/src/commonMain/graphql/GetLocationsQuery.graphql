@@ -1,0 +1,10 @@
+query GetLocations($page: Int! = 1, $filter: FilterLocation) {
+    locations(page: $page, filter: $filter) {
+        locationDTO: results {
+            id
+            name
+            type
+            dimension
+        }
+    }
+}

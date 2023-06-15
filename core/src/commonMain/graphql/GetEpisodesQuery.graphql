@@ -1,0 +1,10 @@
+query GetEpisodes($page: Int! = 1, $filter: FilterEpisode) {
+    episodes(page: $page, filter: $filter) {
+        episodeDTO: results {
+            id
+            name
+            episode
+            air_date
+        }
+    }
+}

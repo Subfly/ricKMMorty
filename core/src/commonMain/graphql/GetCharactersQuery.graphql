@@ -1,0 +1,11 @@
+query GetCharacters($page: Int! = 1, $filter: FilterCharacter) {
+    characters(page: $page, filter: $filter) {
+        characterDTO: results {
+            id
+            name
+            status
+            species
+            image
+        }
+    }
+}

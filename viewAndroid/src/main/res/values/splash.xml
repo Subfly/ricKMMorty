@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.RicKMMorty.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/bgColor</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_monochrome</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+        <item name="splashScreenIconSize">64dp</item>
+    </style>
+</resources>

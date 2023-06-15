@@ -1,0 +1,129 @@
+[versions]
+#Compose
+composeVersion = "1.5.0-beta01"
+activityComposeVersion = "1.7.2"
+
+#Navigation
+navVersion = "2.5.3"
+
+#Material
+material3Version = "1.2.0-alpha02"
+
+#Gradle
+androidGradlePluginVersion = "8.2.0-alpha06"
+
+#Coroutines
+ktxCoroutinesVersion = "1.7.0"
+nativeCoroutinesVersion = "1.0.0-ALPHA-9"
+
+#ViewModel
+kmmVmVersion = "1.0.0-ALPHA-8"
+
+#KSP
+kspVersion = "1.8.21-1.0.11"
+
+#Preferences
+datastoreVersion = "1.1.0-alpha04"
+
+#Dependency Injection
+koinVersion = "3.4.2"
+koinTestVersion = "3.4.1"
+koinComposeVersion = "3.4.4"
+
+#Serialization
+kotlinxSerializationVersion = "1.5.0"
+
+#Coil - Android
+coilVersion = "2.3.0"
+
+#Accompanist - Android
+accompanistVersion = "0.30.1"
+
+#Splash API - Android
+runtimeVersion = "1.5.3"
+splashAPIVersion = "1.0.1"
+
+#Apollo GraphQL
+graphQLVersion = "4.0.0-alpha.1"
+
+#SQLDelight
+sqlDelightVersion = "2.0.0-rc01"
+
+#Lifecycle - Android
+lifecycleVersion = "2.6.1"
+
+[libraries]
+#Compose
+compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "composeVersion" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "composeVersion" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "composeVersion" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "composeVersion" }
+compose-material = { group = "androidx.compose.material", name = "material", version.ref = "composeVersion" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3Version" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityComposeVersion" }
+
+#Navigation
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navVersion" }
+
+#Serializer
+kotlinx-serializer = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationVersion" }
+
+#Coroutines
+ktx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "ktxCoroutinesVersion" }
+ktx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "ktxCoroutinesVersion" }
+
+#Preferences
+datastore = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastoreVersion" }
+datastore-core = { group = "androidx.datastore", name = "datastore-preferences-core", version.ref = "datastoreVersion" }
+
+#Dependency Injection
+koin = { group = "io.insert-koin", name = "koin-core", version.ref = "koinVersion" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koinVersion" }
+koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koinTestVersion" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koinComposeVersion" }
+
+#Coil
+coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coilVersion" }
+
+#Accompanist
+accompanist-system-ui = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "accompanistVersion" }
+
+#Splash API
+splash = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashAPIVersion" }
+
+#Apollo GraphQL
+graphQL = { group = "com.apollographql.apollo3", name = "apollo-runtime", version.ref = "graphQLVersion" }
+
+#SQLDelight
+sqlDelight-native-driver = { group = "app.cash.sqldelight", name = "native-driver", version.ref = "sqlDelightVersion"}
+sqlDelight-android-driver = { group = "app.cash.sqldelight", name = "android-driver", version.ref = "sqlDelightVersion"}
+sqlDelight-coroutines = { group = "app.cash.sqldelight", name = "coroutines-extensions", version.ref = "sqlDelightVersion" }
+sqlDelight-runtime = { group = "app.cash.sqldelight", name = "runtime", version.ref = "runtimeVersion" }
+
+#Lifecycle
+lifecycle-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycleVersion" }
+lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
+lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycleVersion" }
+
+[plugins]
+#Gradle
+android-application = { id = "com.android.application", version.ref = "androidGradlePluginVersion" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePluginVersion" }
+
+#Coroutines
+native-coroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "nativeCoroutinesVersion" }
+
+#KSP
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+
+#Apollo GraphQL
+graphQL = { id = "com.apollographql.apollo3", version.ref = "graphQLVersion" }
+
+#SQLDelight
+sqlDelight = { id = "app.cash.sqldelight", version.ref = "sqlDelightVersion"}
+
+[bundles]
+compose = ["compose.ui", "compose.ui.tooling", "compose.ui.tooling.preview", "compose.foundation", "compose.material", "compose-material3", "activity.compose", "navigation-compose", "lifecycle-viewmodel", "lifecycle-viewmodel-compose", "lifecycle-compose"]
+accompanist = ["accompanist-system-ui"]
+koin-shared = ["koin", "koin-test"]
+koin-android = ["koin", "koin-android", "koin-compose"]
